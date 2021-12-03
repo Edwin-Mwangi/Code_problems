@@ -3,17 +3,15 @@ var removeDuplicates = function(nums) {
     newArray = [];
 
     for(i=0;i<nums.length;i++){
-        for(n=1;n<nums.length;n++){
-            if(nums[i] !== nums[i+n]){
-                newArray.push(nums[i]);
-            }
-        }     
+        if(nums[i] !== nums[i+1]){
+            newArray.push(nums[i]);
+        }   
     }
     console.log(newArray);
     
 };
 
-nums = [1,1,2,2,4,5,6,6,7,7,8,9,10]
+nums = [1,1,2]
 removeDuplicates(nums);
 
 /* sort the array
